@@ -1,0 +1,97 @@
+package com.example.vramba.evis17;
+
+import android.app.AlertDialog;
+import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.Window;
+import android.widget.Button;
+import android.content.Context;
+import android.widget.ImageButton;
+
+public class MainActivity extends AppCompatActivity {
+    Button btnviewAll, btnSearch, butt1, btnLocation;
+    DatabaseHelper myDb;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        myDb = new DatabaseHelper(this);
+        butt1 = (Button)findViewById(R.id.BtnUnos);
+        btnviewAll = (Button)findViewById(R.id.BtnPregled);
+        btnSearch = (Button)findViewById(R.id.BtnPretraga);
+        btnLocation = (Button)findViewById(R.id.BtnLokacija);
+
+        viewAll();
+
+
+        butt1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent int1 = new Intent(MainActivity.this, UnosActivity.class);
+                startActivity(int1);
+            }
+        });
+
+        btnSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent int2 = new Intent (MainActivity.this, PretragaActivity.class);
+                startActivity(int2);
+            }
+        });
+
+        btnLocation.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent int3 = new Intent (MainActivity.this, LocationActivity.class);
+                        startActivity(int3);
+                    }
+                }
+        );
+    }
+
+    public void viewAll(){
+        btnviewAll.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Cursor res = myDb.getAllData();
+                        if (res.getCount() == 0) {
+                            //show message
+                            showMessage("Popis je prazan", "Nema unešenih svirki");
+                            return;
+                        }
+
+                        StringBuffer buffer = new StringBuffer();
+                        while (res.moveToNext()) {
+                            buffer.append("R.br.: " + res.getString(0) + "\n");
+                            buffer.append("Naslov: " + res.getString(1) + "\n");
+                            buffer.append("Datum: " + res.getString(2) + "\n");
+                            buffer.append("Kontakt osoba: " + res.getString(3) + "\n");
+                            buffer.append("Kontakt broj: " + res.getString(4) + "\n");
+                            buffer.append("Lokacija: " + res.getString(5) + "\n");
+                            buffer.append("Pogodba: " + res.getString(6) + "\n");
+                            buffer.append("Zarada: " + res.getString(7) + "\n\n");
+                        }
+                        //show all data
+                        showMessage("Svirke", buffer.toString());
+                    }
+                }
+        );
+    }
+
+    public void showMessage(String title, String Message){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(Message);
+        builder.show();
+    }
+}
