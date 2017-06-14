@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical"
+    android:background="@drawable/background2"
+    android:weightSum="1">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UNOS NOVE SVIRKE"
+        android:textSize="32dp"
+        android:gravity=""
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        android:id="@+id/LblUnos"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:editable="false"
+
+        />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:theme="@style/TextLabel"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Naslov"
+            android:id="@+id/LblNaslov"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"
+            android:capitalize="sentences"
+            android:maxLines="1"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:theme="@style/TextLabel">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Datum"
+            android:id="@+id/LblDatum"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"
+            android:inputType="date"
+            android:maxLines="1" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:theme="@style/TextLabel">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kontakt osoba"
+            android:id="@+id/LblKontaktOsoba"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"
+            android:capitalize="words"
+            android:maxLines="1" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        android:theme="@style/TextLabel">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kontakt broj"
+            android:id="@+id/LblKontaktBroj"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"
+            android:inputType="phone"
+            android:maxLines="1"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:theme="@style/TextLabel">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Lokacija"
+            android:id="@+id/LblLokacija"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"
+            android:capitalize="sentences"
+            android:maxLines="1"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="360dp"
+        android:theme="@style/TextLabel">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pogodba"
+            android:id="@+id/LblPogodba"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"
+            android:inputType="number"
+            android:capitalize="sentences"
+            android:maxLines="1"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="420dp"
+        android:theme="@style/TextLabel"
+        android:id="@+id/view2">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Zarada"
+            android:textColorHint="#ffffff"
+            android:id="@+id/LblZarada"
+            android:textColor="#ffffff"
+            android:inputType="number"
+            android:capitalize="sentences"
+            android:maxLines="1"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="    Unesi svirku    "
+        android:id="@+id/BtnUnesiSvirku"
+        android:background="#FF4081"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/view2"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  Uredi svirku  "
+        android:id="@+id/button2"
+        android:background="#ffffff"
+        android:textColor="#FF4081"
+        android:layout_below="@+id/BtnUnesiSvirku"
+        android:layout_toLeftOf="@+id/BtnUnesiSvirku"
+        android:layout_toStartOf="@+id/BtnUnesiSvirku"
+        android:layout_marginTop="24dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  Obriši svirku  "
+        android:id="@+id/button3"
+        android:background="#ffffff"
+        android:textColor="#FF4081"
+        android:layout_alignTop="@+id/button2"
+        android:layout_toRightOf="@+id/BtnUnesiSvirku"
+        android:layout_toEndOf="@+id/BtnUnesiSvirku" />
+
+    <android.support.design.widget.TextInputLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="600dp"
+        android:theme="@style/TextLabel"
+        android:id="@+id/viewID">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ID"
+            android:textColorHint="#ffffff"
+            android:id="@+id/LblID"
+            android:textColor="#ffffff"
+            android:inputType="number"
+            android:capitalize="sentences"
+            android:maxLines="1"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+
+</RelativeLayout>
+</ScrollView>
