@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical"
+    android:background="@drawable/background4"
+    android:weightSum="1"
+    >
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  Unos | Izmjena | Brisanje  "
+        android:id="@+id/BtnUnos"
+        android:layout_gravity="center_horizontal"
+        android:background="#FF4081"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginTop="170dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pregled svirki"
+        android:id="@+id/BtnPregled"
+        android:layout_below="@+id/BtnUnos"
+        android:layout_alignLeft="@+id/BtnUnos"
+        android:layout_alignStart="@+id/BtnUnos"
+        android:layout_marginTop="24dp"
+        android:textStyle="bold"
+        android:layout_alignRight="@+id/BtnUnos"
+        android:layout_alignEnd="@+id/BtnUnos"
+        android:background="#FF4081"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Provjera termina"
+        android:id="@+id/BtnPretraga"
+        android:layout_below="@+id/BtnPregled"
+        android:layout_alignLeft="@+id/BtnPregled"
+        android:layout_alignStart="@+id/BtnPregled"
+        android:layout_marginTop="24dp"
+        android:textStyle="bold"
+        android:layout_alignRight="@+id/BtnPregled"
+        android:layout_alignEnd="@+id/BtnPregled"
+        android:background="#FF4081"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lokacijske usluge"
+        android:id="@+id/BtnLokacija"
+        android:layout_below="@+id/BtnPretraga"
+        android:layout_alignLeft="@+id/BtnPregled"
+        android:layout_alignStart="@+id/BtnPregled"
+        android:layout_marginTop="24dp"
+        android:textStyle="bold"
+        android:layout_alignRight="@+id/BtnPregled"
+        android:layout_alignEnd="@+id/BtnPregled"
+        android:background="#FF4081"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>
