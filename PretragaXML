@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical"
+    android:background="@drawable/background2"
+    android:weightSum="1"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:clickable="false"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PROVJERA DOSTUPNOSTI DATUMA"
+        android:textColor="#FF4081"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:id="@+id/TxtPretraga"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:theme="@style/TextLabel"
+        android:id="@+id/view3">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Unesite datum za provjeru"
+            android:id="@+id/LblPretragaPoBroju"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"
+            android:inputType="date"
+            android:maxLines="1"
+            android:layout_above="@+id/BtnPretrazi3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Provjeri"
+        android:background="#ffffff"
+        android:textColor="#FF4081"
+        android:id="@+id/BtnPretrazi3"
+        android:layout_below="@+id/view3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+
+
+
+
+</RelativeLayout>
+
+</FrameLayout>
